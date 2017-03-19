@@ -152,7 +152,7 @@ test_scl_usage() {
 validate_default_value() {
   local label=$1
 
-  IFS=':' read -a label_vals <<< $(docker inspect -f "{{index .Config.Labels \"$label\"}}" ${IMAGE_NAME}) 
+  IFS=':' read -a label_vals <<< $(docker inspect -f "{{index .Config.Labels \"$label\"}}" ${IMAGE_NAME})
   label_var=${label_vals[0]}
   default_label_val=${label_vals[1]}
 
