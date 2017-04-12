@@ -1,4 +1,4 @@
-FROM ausnimbus/s2i-base
+FROM quay.io/ausnimbus/s2i-base-scl
 MAINTAINER AusNimbus <support@ausnimbus.com.au>
 
 EXPOSE 8080
