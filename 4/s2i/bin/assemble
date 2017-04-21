@@ -1,11 +1,5 @@
-#!/bin/bash
-
-# Prevent running assemble in builders different than official STI image.
-# The official nodejs:4-onbuild already run npm install and use different
-# application folder.
-[ -d "/usr/src/app" ] && exit 0
-
-set -e
+#!/bin/bash -e
+source /opt/app-root/etc/node_environment
 
 # FIXME: Linking of global modules is disabled for now as it causes npm failures
 #        under RHEL7
