@@ -10,5 +10,5 @@ if [ "$DEV_MODE" == true ]; then
   exec nodemon --debug="$DEBUG_PORT"
 else
   echo "Launching..."
-  exec npm run -d $NPM_RUN
+  exec npm run $NPM_RUN
 fi
